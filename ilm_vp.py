@@ -115,10 +115,10 @@ if __name__ == "__main__":
         headwise=args.head_wise
     )
         
-    checkpoint = torch.load(args.pretrained_dir)
-    checkpoint_model = checkpoint['model']
+    checkpoint = torch.load(args.pretrained_dir, map_location='cpu')
+    checkpoint_model = checkpoint['state_dict']
     network.load_state_dict(checkpoint_model, strict=False)
-
+    network.cuda()
     network.requires_grad_(False)
     network.eval()
 
