@@ -9,3 +9,5 @@ lmdb
 scikit-learn
 matplotlib
 uncertainty-calibration
+timm==0.3.2
+einops
