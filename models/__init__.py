@@ -1,0 +1,1 @@
+from .visual_prompt import AdditiveVisualPrompt, ExpansiveVisualPrompt
